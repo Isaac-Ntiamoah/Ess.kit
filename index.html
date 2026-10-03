@@ -1,0 +1,449 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>The Essay Kit | Answer simple questions. Build an amazing essay.</title>
+<meta name="description" content="A guided workbook for scholarship, university and application essays. Answer short questions, stitch the answers into a finished essay.">
+<meta property="og:title" content="The Essay Kit">
+<meta property="og:description" content="Answer simple questions. Build an amazing essay.">
+<meta name="theme-color" content="#0B1A36">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500;12..96,700;12..96,800&family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,500;1,6..72,400&display=swap" rel="stylesheet">
+<style>
+:root{
+  --navy:#0B1A36; --navy2:#13294F; --navy3:#223C6E;
+  --gold:#F2B632; --gold-d:#B98A14;
+  --coral:#E55A33; --amber:#F4A640; --slate:#3F5C8A; --teal:#18A89B; --purple:#7B5EA7; --sky:#2E86AB;
+  --paper:#F6F7FB; --white:#fff; --text:#12203D; --muted:#5A6784;
+  --display:'Bricolage Grotesque',system-ui,sans-serif;
+  --serif:'Newsreader',Georgia,serif;
+  --sans:system-ui,-apple-system,'Segoe UI',sans-serif;
+  --k1:var(--coral); --k2:var(--amber); --k3:var(--slate); --k4:var(--teal); --k5:var(--purple); --k6:var(--sky); --k7:var(--gold);
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{font-family:var(--sans);color:var(--text);background:var(--paper);line-height:1.55;-webkit-font-smoothing:antialiased;padding-bottom:78px}
+a{color:inherit}
+img{display:block;max-width:100%}
+:focus-visible{outline:3px solid var(--gold);outline-offset:3px;border-radius:8px}
+.wrap{max-width:1080px;margin:0 auto;padding:0 22px}
+
+.btn{display:inline-block;background:var(--gold);color:var(--navy);font-family:var(--display);font-weight:800;font-size:1.08rem;padding:16px 30px;border-radius:999px;text-decoration:none;box-shadow:0 6px 0 var(--gold-d);transition:transform .15s,box-shadow .15s;border:0;cursor:pointer}
+.btn:hover{transform:translateY(-2px);box-shadow:0 8px 0 var(--gold-d)}
+.btn:active{transform:translateY(4px);box-shadow:0 2px 0 var(--gold-d)}
+.btn.sm{font-size:.95rem;padding:11px 20px;box-shadow:0 4px 0 var(--gold-d)}
+.btn.ghost{background:transparent;color:var(--white);box-shadow:none;border:2px solid var(--navy3);padding:12px 22px;font-size:.98rem}
+.btn.ghost:hover{box-shadow:none;border-color:var(--gold)}
+
+h2{font-family:var(--display);font-weight:800;font-size:clamp(1.9rem,6.4vw,3rem);line-height:1.05;letter-spacing:-.02em;margin-bottom:14px}
+.lead{font-family:var(--serif);font-size:1.25rem;color:var(--muted);max-width:50ch;margin-bottom:32px}
+.dark{background:var(--navy);color:var(--white)}
+.dark .lead{color:#B9C5E0}
+section{padding:70px 0}
+
+.ph{position:relative;overflow:hidden;background:var(--c1,#2A4A85);isolation:isolate}
+.ph svg{position:absolute;inset:0;width:100%;height:100%}
+.ph img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;z-index:2}
+
+.hero{background:var(--navy);color:var(--white);padding:34px 0 70px;overflow:hidden;position:relative}
+.hero::before,.hero::after{content:"";position:absolute;border-radius:50%;background:var(--navy2);z-index:0}
+.hero::before{width:520px;height:520px;right:-190px;top:-200px}
+.hero::after{width:300px;height:300px;left:-140px;bottom:-130px}
+.hero .wrap{position:relative;z-index:1;display:grid;gap:34px}
+.top{display:flex;justify-content:space-between;align-items:center;margin-bottom:26px}
+.logo{font-family:var(--display);font-weight:800;font-size:1.1rem;color:var(--gold)}
+.hero h1{font-family:var(--display);font-weight:800;font-size:clamp(2.6rem,11vw,5rem);line-height:.98;letter-spacing:-.03em}
+.hero h1 em{font-style:normal;color:var(--gold)}
+.hero .lede{font-family:var(--serif);font-size:1.28rem;color:#C9D4EC;margin:20px 0 28px;max-width:32ch}
+.cta-row{display:flex;flex-wrap:wrap;gap:14px;align-items:center}
+.fine{margin-top:16px;font-size:.9rem;color:#8FA0C6}
+
+.collage{position:relative;width:100%;max-width:440px;margin:0 auto;aspect-ratio:1/1.08}
+.collage .cover{position:absolute;left:4%;top:3%;width:58%;border-radius:12px;box-shadow:0 22px 50px rgba(0,0,0,.45);transform:rotate(-5deg)}
+.collage .page2{position:absolute;left:24%;top:30%;width:50%;border-radius:10px;box-shadow:0 22px 50px rgba(0,0,0,.45);transform:rotate(4deg);z-index:1}
+.collage .pa{position:absolute;right:0;top:0;width:40%;aspect-ratio:1;border-radius:50%;border:5px solid var(--gold);--c1:#E55A33;z-index:3}
+.collage .pb{position:absolute;right:2%;bottom:2%;width:46%;aspect-ratio:4/5;border-radius:26px;border:5px solid var(--white);--c1:#18A89B;z-index:3}
+.chip{position:absolute;z-index:4;background:var(--white);color:var(--navy);font-family:var(--display);font-weight:700;font-size:.82rem;padding:8px 13px;border-radius:14px;box-shadow:0 8px 22px rgba(0,0,0,.3)}
+.chip.c1{left:0;bottom:12%;transform:rotate(-3deg)}
+.chip.c2{right:30%;top:40%;background:var(--gold);transform:rotate(3deg)}
+
+.strip{background:var(--gold);color:var(--navy);padding:16px 0;overflow:hidden}
+.strip .row{display:flex;gap:10px;overflow-x:auto;padding:0 22px;scrollbar-width:none}
+.strip .row::-webkit-scrollbar{display:none}
+.strip span{flex:0 0 auto;font-family:var(--display);font-weight:700;font-size:.95rem;background:var(--navy);color:var(--gold);padding:8px 16px;border-radius:999px}
+.strip p{font-family:var(--display);font-weight:800;text-align:center;font-size:.95rem;margin-bottom:10px}
+
+.versus{display:grid;gap:14px}
+.versus>div{border-radius:24px;padding:28px}
+.blank{background:var(--white);border:3px dashed #C4CCDF}
+.blank .n{font-family:var(--display);font-weight:800;font-size:3.4rem;line-height:1;color:#A5AFC6}
+.blank p{color:var(--muted);margin-top:8px}
+.seven{background:var(--navy);color:var(--white)}
+.seven .n{font-family:var(--display);font-weight:800;font-size:3.4rem;line-height:1;color:var(--gold)}
+.seven p{color:#B9C5E0;margin:8px 0 18px}
+.mini{display:flex;gap:6px;flex-wrap:wrap}
+.mini i{height:14px;border-radius:7px;flex:1 1 30px}
+
+.flip{background:#E7ECF7}
+.rail{display:flex;gap:18px;overflow-x:auto;scroll-snap-type:x mandatory;padding:6px 22px 24px;margin:0 -22px;scrollbar-width:thin}
+.card{flex:0 0 min(74vw,300px);scroll-snap-align:center;background:var(--white);border-radius:20px;padding:12px 12px 16px;box-shadow:0 12px 30px rgba(11,26,54,.14);cursor:zoom-in;border:0;text-align:left;font:inherit;color:inherit}
+.card img{border-radius:10px;width:100%;border:1px solid #E1E6F2}
+.card b{display:block;font-family:var(--display);font-size:1.05rem;margin:12px 4px 2px}
+.card span{display:block;font-size:.9rem;color:var(--muted);margin:0 4px}
+.hint{font-size:.9rem;color:var(--muted);margin-top:4px}
+
+dialog{border:0;background:transparent;max-width:min(94vw,640px);width:100%;margin:auto;padding:0}
+dialog::backdrop{background:rgba(7,14,30,.85)}
+dialog img{width:100%;max-height:90vh;object-fit:contain;border-radius:12px;background:#fff}
+dialog button{position:absolute;right:6px;top:6px;z-index:2;background:var(--gold);border:0;border-radius:999px;width:38px;height:38px;font-size:1.2rem;font-weight:800;cursor:pointer;color:var(--navy)}
+
+.pills{display:flex;gap:8px;flex-wrap:wrap;margin-bottom:20px}
+.pill{border:2px solid var(--navy3);background:transparent;color:#C9D4EC;font-family:var(--display);font-weight:700;font-size:.98rem;padding:10px 18px;border-radius:999px;cursor:pointer}
+.pill[aria-pressed="true"]{background:var(--gold);border-color:var(--gold);color:var(--navy)}
+.meter{background:var(--navy2);border-radius:999px;height:16px;display:flex;overflow:hidden;margin-bottom:8px}
+.meter i{display:block;height:100%;width:0;transition:width .6s cubic-bezier(.2,.9,.3,1)}
+.count{font-family:var(--display);font-weight:700;color:#B9C5E0;font-size:.95rem;margin-bottom:18px}
+.count b{color:var(--gold);font-size:1.4rem}
+.out{display:grid;gap:12px;margin-bottom:22px;min-height:120px}
+.empty{border:2px dashed var(--navy3);border-radius:18px;padding:30px 20px;text-align:center;color:#8FA0C6}
+.blk{background:var(--navy2);border-radius:18px;border-left:8px solid var(--c);padding:16px 18px;animation:pop .45s cubic-bezier(.2,.9,.3,1.25)}
+@keyframes pop{from{transform:translateY(26px) scale(.97);opacity:0}to{transform:none;opacity:1}}
+.blk .hd{display:flex;justify-content:space-between;font-family:var(--display);font-weight:700;font-size:.9rem;color:var(--c);margin-bottom:8px}
+.blk .hd span:last-child{color:#8FA0C6;font-weight:500}
+.blk .ans{display:inline-block;background:var(--c);color:var(--navy);font-weight:700;font-size:.86rem;padding:5px 11px;border-radius:10px;margin-bottom:10px}
+.blk p{font-family:var(--serif);font-size:1.1rem;line-height:1.6;color:#EEF2FB}
+.done{background:var(--gold);color:var(--navy);border-radius:18px;padding:22px;animation:pop .45s}
+.done b{font-family:var(--display);font-size:1.3rem;display:block;margin-bottom:6px}
+.done .btn{background:var(--navy);color:var(--gold);box-shadow:0 5px 0 #000;margin-top:14px}
+.ctrl{display:flex;gap:12px;flex-wrap:wrap;align-items:center}
+
+.stu{display:grid;gap:18px}
+.s{background:var(--white);border-radius:26px;overflow:hidden;box-shadow:0 12px 30px rgba(11,26,54,.1)}
+.s .ph{aspect-ratio:4/3.2}
+.s .body{padding:20px 22px 24px}
+.s .tag{display:inline-block;font-family:var(--display);font-weight:700;font-size:.82rem;background:var(--c);color:var(--navy);padding:4px 12px;border-radius:999px;margin-bottom:10px}
+.s h3{font-family:var(--display);font-weight:800;font-size:1.4rem;margin-bottom:8px}
+.s q{display:block;font-family:var(--serif);font-style:italic;font-size:1.12rem;color:var(--muted);margin-bottom:14px;quotes:none}
+.s .res{font-family:var(--display);font-weight:700;color:var(--text);font-size:.95rem;border-top:2px solid var(--paper);padding-top:12px}
+.note{font-size:.88rem;color:var(--muted);margin-top:16px}
+
+.inside{display:grid;gap:12px;list-style:none}
+.inside li{background:var(--navy2);border-radius:18px;padding:18px 20px;border-top:5px solid var(--c)}
+.inside b{font-family:var(--display);font-size:1.08rem;display:block;margin-bottom:3px}
+.inside span{color:#B9C5E0;font-size:.95rem}
+
+.tw{overflow-x:auto;border-radius:18px;box-shadow:0 10px 26px rgba(11,26,54,.08)}
+table{width:100%;border-collapse:collapse;background:var(--white);font-size:.98rem}
+th,td{padding:12px 16px;text-align:right;border-bottom:1px solid #E4E8F2}
+th:first-child,td:first-child{text-align:left;font-weight:700}
+th{background:var(--navy);color:var(--white);font-family:var(--display)}
+tr:last-child td{border-bottom:0}
+td:first-child::before{content:"";display:inline-block;width:10px;height:10px;border-radius:50%;background:var(--c);margin-right:10px}
+
+details{background:var(--white);border-radius:16px;padding:18px 20px;margin-bottom:10px;box-shadow:0 6px 18px rgba(11,26,54,.06)}
+summary{font-family:var(--display);font-weight:700;font-size:1.08rem;cursor:pointer;list-style:none;display:flex;justify-content:space-between;gap:12px}
+summary::after{content:"+";color:var(--gold-d);font-size:1.4rem;line-height:1}
+details[open] summary::after{content:"\2212"}
+details p{margin-top:10px;color:var(--muted)}
+
+.final{background:var(--navy);color:var(--white);text-align:center;padding:84px 0;position:relative;overflow:hidden}
+.final::before{content:"";position:absolute;width:420px;height:420px;border-radius:50%;background:var(--navy2);left:50%;top:50%;transform:translate(-50%,-50%)}
+.final .wrap{position:relative}
+.final h2{margin:0 auto 14px;max-width:15ch}
+.final p{font-family:var(--serif);font-size:1.25rem;color:#C9D4EC;margin-bottom:28px}
+footer{background:var(--navy);color:#6F80A6;text-align:center;font-size:.82rem;padding:0 0 26px}
+
+.bar{position:fixed;left:0;right:0;bottom:0;z-index:20;background:var(--navy);padding:11px 18px;display:flex;justify-content:space-between;align-items:center;gap:12px;box-shadow:0 -6px 24px rgba(0,0,0,.3)}
+.bar span{font-family:var(--display);font-weight:700;color:var(--white)}
+
+@media(min-width:840px){
+  body{padding-bottom:0}.bar{display:none}
+  section{padding:96px 0}
+  .hero{padding:40px 0 90px}
+  .hero .wrap{grid-template-columns:1.05fr .95fr;align-items:center;gap:40px}
+  .versus{grid-template-columns:1fr 1fr}
+  .stu{grid-template-columns:repeat(3,1fr)}
+  .inside{grid-template-columns:repeat(3,1fr)}
+  .card{flex-basis:260px}
+  .rail{margin:0;padding-left:0;padding-right:0}
+}
+@media(prefers-reduced-motion:reduce){
+  .blk,.done{animation:none}.meter i{transition:none}html{scroll-behavior:auto}.btn{transition:none}
+}
+</style>
+</head>
+<body>
+
+<svg width="0" height="0" style="position:absolute" aria-hidden="true">
+  <symbol id="sil" viewBox="0 0 100 100" preserveAspectRatio="xMidYMax slice">
+    <circle cx="50" cy="38" r="17" fill="rgba(255,255,255,.28)"/>
+    <path d="M14 110c0-26 16-40 36-40s36 14 36 40z" fill="rgba(255,255,255,.28)"/>
+  </symbol>
+</svg>
+
+<header class="hero">
+  <div class="wrap">
+    <div>
+      <div class="top"><div class="logo">The Essay Kit</div></div>
+      <h1>Answer simple questions. <em>Build an amazing essay.</em></h1>
+      <p class="lede">The guided workbook for scholarship, university and application essays. Seven short pieces. One essay that sounds like you.</p>
+      <div class="cta-row">
+        <a class="btn" href="https://whop.com/checkout/plan_95BdcH4MsIU9M" target="_blank" rel="noopener">Get the Essay Kit</a>
+        <a class="btn ghost" href="#build">Try it first</a>
+      </div>
+      <p class="fine">27 pages. Secure checkout on Whop.</p>
+    </div>
+
+    <div class="collage">
+      <img class="cover" src="pages/page1.jpg" alt="Cover of The Essay Kit workbook" onerror="this.remove()">
+      <img class="page2" src="pages/page6.jpg" alt="Inside page: The Hook block with guided questions" onerror="this.remove()">
+      <figure class="ph pa"><svg><use href="#sil"/></svg><img src="photos/hero-1.jpg" alt="A student writing their essay" onerror="this.remove()"></figure>
+      <figure class="ph pb"><svg><use href="#sil"/></svg><img src="photos/hero-2.jpg" alt="A student smiling at their finished essay" onerror="this.remove()"></figure>
+      <div class="chip c1">My hook: two filled chairs.</div>
+      <div class="chip c2">7 blocks. ~500 words.</div>
+    </div>
+  </div>
+</header>
+
+<div class="strip">
+  <p>Built for every kind of essay prompt</p>
+  <div class="row">
+    <span>A challenge you overcame</span><span>A time you led</span><span>Why this school</span><span>Your community</span><span>Who you are</span><span>Your future goals</span>
+  </div>
+</div>
+
+<section>
+  <div class="wrap">
+    <h2>A blank page is scary. Seven small answers are not.</h2>
+    <p class="lead">Each block asks you a few plain questions. Your answers, in order, become your sentences.</p>
+    <div class="versus">
+      <div class="blank"><div class="n">500</div><p>words on one blank page, and no idea where to start.</p></div>
+      <div class="seven"><div class="n">7</div><p>short pieces of 20 to 100 words. Ten minutes each.</p>
+        <div class="mini"><i style="background:var(--k1)"></i><i style="background:var(--k2)"></i><i style="background:var(--k3)"></i><i style="background:var(--k4)"></i><i style="background:var(--k5)"></i><i style="background:var(--k6)"></i><i style="background:var(--k7)"></i></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="flip">
+  <div class="wrap">
+    <h2>Flip through the kit</h2>
+    <p class="lead">These are real pages from the workbook. Tap any page to zoom in.</p>
+    <div class="rail" id="rail">
+      <button class="card" type="button"><img src="pages/page4.jpg" alt="Find your story page" loading="lazy" onerror="this.closest('.card').remove()"><b>Find your story</b><span>Six sparks to pick a specific story, even if yours isn't dramatic.</span></button>
+      <button class="card" type="button"><img src="pages/page6.jpg" alt="The Hook block page" loading="lazy" onerror="this.closest('.card').remove()"><b>Guided questions</b><span>Every block asks 3 or 4 plain questions, with a tip and real examples.</span></button>
+      <button class="card" type="button"><img src="pages/page8.jpg" alt="The Moment block page" loading="lazy" onerror="this.closest('.card').remove()"><b>Worked examples</b><span>Three students show real answers in every block.</span></button>
+      <button class="card" type="button"><img src="pages/page14.jpg" alt="The Lesson block page" loading="lazy" onerror="this.closest('.card').remove()"><b>Checks for every block</b><span>A quick checklist and a "watch out" so you know it's working.</span></button>
+      <button class="card" type="button"><img src="pages/page21.jpg" alt="A full sample essay, color-coded by block" loading="lazy" onerror="this.closest('.card').remove()"><b>Full sample essays</b><span>See a finished essay, color-coded by block.</span></button>
+      <button class="card" type="button"><img src="pages/page26.jpg" alt="The word bank page" loading="lazy" onerror="this.closest('.card').remove()"><b>Word bank</b><span>Strong verbs, show-don't-tell swaps and clichés to cut.</span></button>
+    </div>
+    <p class="hint">Swipe to see more pages.</p>
+  </div>
+</section>
+
+<dialog id="zoom"><button type="button" aria-label="Close">&times;</button><img alt=""></dialog>
+
+<section class="dark" id="build">
+  <div class="wrap">
+    <h2>Build an essay right here</h2>
+    <p class="lead">Pick a student. Add one block at a time and watch a short answer turn into a finished sentence.</p>
+    <div class="pills" id="pills"></div>
+    <div class="meter" id="meter"></div>
+    <div class="count"><b id="wc">0</b> words so far</div>
+    <div class="out" id="out"></div>
+    <div class="ctrl">
+      <button class="btn" id="next" type="button">Add The Hook</button>
+      <button class="btn ghost" id="reset" type="button">Start over</button>
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="wrap">
+    <h2>Three students. Three real stories.</h2>
+    <p class="lead">Every one started with a small, specific moment, not a dramatic one. All three essays are inside the kit.</p>
+    <div class="stu">
+      <article class="s" style="--c:var(--amber)">
+        <figure class="ph" style="--c1:#F4A640"><svg><use href="#sil"/></svg><img src="photos/student-club.jpg" alt="Student who started a homework club" loading="lazy" onerror="this.remove()"></figure>
+        <div class="body"><span class="tag">A challenge</span><h3>The Empty Chairs</h3>
+          <q>The first day of my homework club, exactly two chairs were filled, and one of them was mine.</q>
+          <div class="res">Fourteen kids showing up within two months.</div></div>
+      </article>
+      <article class="s" style="--c:var(--teal)">
+        <figure class="ph" style="--c1:#18A89B"><svg><use href="#sil"/></svg><img src="photos/student-store.jpg" alt="Student who ran a family corner store" loading="lazy" onerror="this.remove()"></figure>
+        <div class="body"><span class="tag">A mistake</span><h3>The Mango Order</h3>
+          <q>I once ordered four hundred mangoes for a corner store that mostly sold canned beans.</q>
+          <div class="res">Sold out in three days.</div></div>
+      </article>
+      <article class="s" style="--c:var(--purple)">
+        <figure class="ph" style="--c1:#7B5EA7"><svg><use href="#sil"/></svg><img src="photos/student-robot.jpg" alt="Student captain of a robotics team" loading="lazy" onerror="this.remove()"></figure>
+        <div class="body"><span class="tag">Teamwork</span><h3>Eleven Seconds</h3>
+          <q>Our robot drove off the table eleven seconds into the first match of the season.</q>
+          <div class="res">Lost two more matches, then won the next four.</div></div>
+      </article>
+    </div>
+    <p class="note">Sample essays from the kit.</p>
+  </div>
+</section>
+
+<section class="dark">
+  <div class="wrap">
+    <h2>Everything you get</h2>
+    <p class="lead">One workbook, from blank page to submit button.</p>
+    <ul class="inside">
+      <li style="--c:var(--k1)"><b>Your essay card</b><span>Capture the prompt, the reader and your core message once.</span></li>
+      <li style="--c:var(--k2)"><b>Story finder</b><span>Six sparks to uncover a specific story.</span></li>
+      <li style="--c:var(--k3)"><b>Prompt matcher</b><span>See which blocks deserve the most words for your prompt.</span></li>
+      <li style="--c:var(--k4)"><b>7 guided blocks</b><span>Questions, tips, examples and a check for each one.</span></li>
+      <li style="--c:var(--k5)"><b>Stitching guide</b><span>Connector phrases and a read-aloud seam check.</span></li>
+      <li style="--c:var(--k6)"><b>3 full sample essays</b><span>A club, a corner store and a robotics team.</span></li>
+      <li style="--c:var(--k7)"><b>Word bank</b><span>Strong verbs and clichés to cut.</span></li>
+      <li style="--c:var(--k1)"><b>Polish checklist</b><span>Three editing passes and a before-you-submit list.</span></li>
+    </ul>
+  </div>
+</section>
+
+<section>
+  <div class="wrap">
+    <h2>Fits your word limit</h2>
+    <p class="lead">Check your limit and aim for the matching column.</p>
+    <div class="tw">
+      <table>
+        <thead><tr><th>Block</th><th>250</th><th>500</th><th>650</th></tr></thead>
+        <tbody>
+          <tr style="--c:var(--k1)"><td>The Hook</td><td>20</td><td>35</td><td>45</td></tr>
+          <tr style="--c:var(--k2)"><td>The Moment</td><td>50</td><td>100</td><td>130</td></tr>
+          <tr style="--c:var(--k3)"><td>The Struggle</td><td>40</td><td>85</td><td>110</td></tr>
+          <tr style="--c:var(--k4)"><td>The Turn</td><td>40</td><td>85</td><td>115</td></tr>
+          <tr style="--c:var(--k5)"><td>The Lesson</td><td>45</td><td>90</td><td>120</td></tr>
+          <tr style="--c:var(--k6)"><td>The Bridge</td><td>35</td><td>75</td><td>95</td></tr>
+          <tr style="--c:var(--k7)"><td>The Close</td><td>20</td><td>30</td><td>35</td></tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</section>
+
+<section style="padding-top:0">
+  <div class="wrap">
+    <h2>Quick questions</h2>
+    <details><summary>Who is it for?</summary><p>Anyone writing a scholarship, university or application essay.</p></details>
+    <details><summary>I don't have a dramatic story. Is that a problem?</summary><p>No. The kit says you don't need a dramatic story, you need a specific one. A small, real moment beats a big, fake one.</p></details>
+    <details><summary>How long does it take?</summary><p>The kit suggests a 10-minute timer per block, so you can finish a whole first draft in a weekend.</p></details>
+    <details><summary>Will it work for my prompt and word limit?</summary><p>Yes. The prompt matcher shows where to spend your words, and the word budget covers 250, 500 and 650-word essays.</p></details>
+  </div>
+</section>
+
+<div class="final">
+  <div class="wrap">
+    <h2>Seven short pieces. One essay that sounds like you.</h2>
+    <p>Start your first block today.</p>
+    <a class="btn" href="https://whop.com/checkout/plan_95BdcH4MsIU9M" target="_blank" rel="noopener">Get the Essay Kit</a>
+  </div>
+</div>
+<footer>The Essay Kit | SCHKIT</footer>
+
+<div class="bar"><span>The Essay Kit</span><a class="btn sm" href="https://whop.com/checkout/plan_95BdcH4MsIU9M" target="_blank" rel="noopener">Get it now</a></div>
+
+<script>
+window.addEventListener('load',()=>{if(!document.querySelector('#rail .card'))document.querySelector('.flip').style.display='none'});
+const zoom=document.getElementById('zoom'), zimg=zoom.querySelector('img');
+document.querySelectorAll('#rail .card').forEach(c=>c.addEventListener('click',()=>{
+  const i=c.querySelector('img'); zimg.src=i.src; zimg.alt=i.alt; zoom.showModal();
+}));
+zoom.querySelector('button').onclick=()=>zoom.close();
+zoom.addEventListener('click',e=>{if(e.target===zoom)zoom.close()});
+
+const NAMES=['The Hook','The Moment','The Struggle','The Turn','The Lesson','The Bridge','The Close'];
+const COLS=['var(--k1)','var(--k2)','var(--k3)','var(--k4)','var(--k5)','var(--k6)','var(--k7)'];
+const STORIES=[
+ {t:'The Empty Chairs', a:[
+  'Two filled chairs.',
+  'A neighbor\u2019s little brother asked if there were snacks.',
+  'This whole idea is silly.',
+  'I knocked on doors.',
+  'I used to think I knew what people needed. Now I ask.',
+  'Policies fail when built for people, not with them.',
+  'One of the original chairs by my desk.'],
+  b:[
+  'The first day of my homework club, exactly two chairs were filled, and one of them was mine.',
+  'It was a Tuesday in September, and I had spent the whole weekend carrying folding chairs into our garage, taping alphabet posters to the walls, and printing worksheets I was sure every kid on our street needed. At four o\u2019clock I sat by the door and waited. A neighbor\u2019s little brother wandered in, looked around, and asked if there were snacks. There were not.',
+  'By the third week, the chairs were still empty. I told myself the whole idea was silly and told my mom I was quitting. She only asked, \u201CDid you ask anyone what they wanted?\u201D I had not. I had built something for people I never talked to.',
+  'So I knocked on doors. Twelve families answered, and what they told me surprised me: the kids did not need worksheets, they needed a quiet place to finish homework and someone patient enough to sit beside them. The next Tuesday I took down the posters and brought a bag of oranges.',
+  'Within two months, fourteen kids were showing up. I talked less and listened more, and their grades climbed faster than any worksheet had ever managed. I learned that helping people starts with hearing what they need, not what I assume they need.',
+  'That lesson is why I want to study education policy at Northfield University. Policies, like my first club, fail when they are built for people instead of with them. I want the research skills to ask better questions at a much larger scale.',
+  'I still keep one of those two original chairs by my desk. It reminds me that every good idea begins in a mostly empty room, and that the work is to go find out who belongs in it.']},
+ {t:'The Mango Order', a:[
+  'Four hundred mangoes.',
+  'My father looked at the crates, then at me, and said nothing.',
+  'I just ruined what my parents built.',
+  'I made a cardboard sign and set up a sidewalk table.',
+  'I used to think a mistake meant failure. Now it is information.',
+  'Small businesses need numbers they can actually use.',
+  'The cardboard sign in the stockroom.'],
+  b:[
+  'I once ordered four hundred mangoes for a corner store that mostly sold canned beans.',
+  'On a Thursday morning I stood in our stockroom, surrounded by crates stacked to the ceiling, the sweet smell of ripening fruit already too strong. The delivery driver was backing his truck out of the alley. My father appeared in the doorway, looked at the crates, then at me, and said nothing at all.',
+  'That night I did the math on my phone: four days before the mangoes turned, and more money sitting in crates than we made in a week. I told myself I had ruined the one thing my parents built. I did not sleep, and I did not know how to apologize.',
+  'At six the next morning I made a sign from a cardboard box and set a table on the sidewalk. Then I texted every customer in my father\u2019s phone, one by one, offering mangoes at half price. Two neighbors came. By noon, they had told their friends.',
+  'We sold out in three days, and I kept a notebook of who bought what. I learned that a mistake is only expensive when I hide it, and that numbers I track are numbers I can fix. Now I check last month\u2019s sales before I order anything.',
+  'That notebook is why I want to study data analytics at Riverside University. I want to learn how to turn small, messy numbers into decisions that help family businesses like ours survive.',
+  'The cardboard sign still hangs in the stockroom, one corner curled. My father never mentions the mangoes. He just points at it when new employees ask how we learned to count.']},
+ {t:'Eleven Seconds', a:[
+  'The robot driving off the table.',
+  'Everyone looked at me. Our coach picked up the pieces.',
+  'I have no idea what went wrong.',
+  'I made everyone stop and write down what happened.',
+  'I used to think a captain has the answers. Now a captain asks.',
+  'Teams that break things need people who ask questions.',
+  'The cracked wheel on my shelf.'],
+  b:[
+  'Our robot drove off the table eleven seconds into the first match of the season.',
+  'A hundred people gasped at once. The robot hit the floor with a crack I can still hear, one wheel spinning slowly in the silence. I was holding the controller, and every teammate was looking at me. Our coach picked up the pieces and walked to the pit without a word.',
+  'In the pit, the arguing started. Someone blamed the code, someone blamed the build, someone blamed my driving. I wanted to hand the controller to anyone else and leave. I told myself a captain should know what went wrong, and I had no idea.',
+  'Instead of choosing a culprit, I asked everyone to stop and write down exactly what happened in those eleven seconds. We turned the notes into a checklist and ran the same test thirty times. On the twelfth run, I found a sensor cable that had worked loose.',
+  'We lost two more matches, then won the next four. I learned that blaming a person fixes nothing, but asking what happened fixes almost everything. I stopped being the loudest voice on the team and became the one asking questions.',
+  'That habit is why I want to study mechanical engineering at Lakeshore University, where student teams build and break their own designs every semester. I want to practice solving problems with other people instead of in spite of them.',
+  'I keep the cracked wheel on my shelf. It reminds me that the real test of a team is not whether the robot stays on the table, but what we do in the eleven seconds after it falls.']}
+];
+const pills=document.getElementById('pills'), out=document.getElementById('out'), meter=document.getElementById('meter'),
+      wc=document.getElementById('wc'), nextBtn=document.getElementById('next'), resetBtn=document.getElementById('reset');
+let cur=0, step=0;
+const words=s=>s.trim().split(/\s+/).length;
+
+function render(){
+  const S=STORIES[cur];
+  [...pills.children].forEach((p,i)=>p.setAttribute('aria-pressed',i===cur));
+  out.innerHTML='';
+  meter.innerHTML='';
+  let total=0;
+  if(step===0){ out.innerHTML='<div class="empty">Tap the button to add your first block.</div>'; }
+  for(let i=0;i<step;i++){
+    const n=words(S.b[i]); total+=n;
+    const el=document.createElement('div'); el.className='blk'; el.style.setProperty('--c',COLS[i]);
+    el.innerHTML=`<div class="hd"><span>${i+1}. ${NAMES[i]}</span><span>${n} words</span></div><div class="ans">You answer: ${S.a[i]}</div><p>${S.b[i]}</p>`;
+    out.appendChild(el);
+    const m=document.createElement('i'); m.style.background=COLS[i]; m.style.width='0';
+    meter.appendChild(m);
+  }
+  requestAnimationFrame(()=>{[...meter.children].forEach((m,i)=>m.style.width=(words(S.b[i])/340*100)+'%')});
+  wc.textContent=total;
+  if(step>=7){
+    nextBtn.hidden=true;
+    const d=document.createElement('div'); d.className='done';
+    d.innerHTML=`<b>That's a full essay in seven answers.</b>Now do it with your own story, step by step.<br><a class="btn" href="https://whop.com/checkout/plan_95BdcH4MsIU9M" target="_blank" rel="noopener">Get the Essay Kit</a>`;
+    out.appendChild(d);
+  } else { nextBtn.hidden=false; nextBtn.textContent='Add '+NAMES[step]; }
+}
+STORIES.forEach((s,i)=>{
+  const b=document.createElement('button'); b.className='pill'; b.type='button'; b.textContent=s.t;
+  b.onclick=()=>{cur=i;step=0;render()}; pills.appendChild(b);
+});
+nextBtn.onclick=()=>{ if(step<7){step++;render(); const l=out.children[Math.min(step-1,out.children.length-1)]; if(l)l.scrollIntoView({behavior:'smooth',block:'nearest'});} };
+resetBtn.onclick=()=>{step=0;render()};
+render();
+</script>
+</body>
+</html>
